@@ -1,0 +1,20 @@
+<div class="card" style="width: 18rem">
+  <div class="card-header">Products List</div>
+  <ul class="list-group list-group-flush" *ngFor="let item of mockProducts">
+    <li class="list-group-item">
+      <div class="card-body">
+        <h2>{{ item.product_name }}</h2>
+        <img [src]="item.image" class="card-img-top" alt="productImg" />
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="productDetails(item.id)"
+        >
+          Product Details
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>
